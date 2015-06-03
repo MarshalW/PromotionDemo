@@ -14,8 +14,17 @@
     }
 
     body {
-      background: #eee;
+      background:#4c4c4c;
       padding: 15px;
+    }
+
+    #content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /*visibility: hidden;*/
     }
 
     #demo {
@@ -23,9 +32,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      visibility: hidden;
-      background: #457;
+      height: 98%;
+      /*visibility: hidden;*/
     }
 
     #demo p {
@@ -46,72 +54,62 @@
       margin-bottom: 200px;
     }
 
-    .dragend-page .page{
-      -webkit-transform: translate3d(0, 0, 0);
+    .dragend-page{
+      background: #04477c;
+      overflow: auto;
     }
 
-    @-webkit-keyframes fade {
+    .anim{
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-perspective: 1000;
+      -webkit-backface-visibility: hidden;
+    }
+
+    /*.galaryImage{
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-perspective: 1000;
+      -webkit-backface-visibility: hidden;
+    }
+*/
+
+    .galaryImage{
+      display: block; 
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #galary{
+      max-height: 300px;
+    }
+
+    @-webkit-keyframes fadeIn {
        0% {
           opacity: 0;
-       }
+    `   }
        100% {
           opacity: 1;
        }
     }
 
-    .fadeComponent {
-       -webkit-animation-name: fade;
-       -webkit-animation-duration: 1s;
+    @-webkit-keyframes scale{
+      0%   {-webkit-transform: scale3d(0, 0, 0);}
+      100% {-webkit-transform: scale3d(1, 1, 1);}
     }
-  
+
+    @-webkit-keyframes leftShake{
+        0%   {-webkit-transform: translate3d(-800px, 0, 0);}
+        100% {-webkit-transform: translate3d(0, 0, 0);}
+    }
+
+
   </style>
 
 </head>
 <body>
-
-  <div id="demo">
-    <ul>
-      <li class="first dragend-page" style="background: -webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.7) 100%), url(imgs/river-stream.jpg) repeat 0 0;background-size: cover;">
-        <div class='content'>
-          <p class="anim">　　淹水出越巂遂久县徼外，吕忱曰：淹水，一曰复水也。</p>
-          <p class="anim">　　东南至青蛉县。</p>
-          <p class="anim">　　县有禺同山，其山神有金马、碧鸡，光景倏忽，民多见之。汉宣帝遣谏大夫王褒祭之，欲至其鸡、马，褒道病而卒，是不果焉。王褒《碧鸡颂》曰：敬移金精神马，缥缥碧鸡。故左太冲《蜀都赋》曰：金马骋光而绝影，碧鸡倏忽而耀仪。又东过姑复县南，东入于若水。</p>
-        </div>
-      </li>
-      <li class="dragend-page">
-        <div class="content">
-          <p class="anim">　　过不韦县，县故九隆哀牢之国也。有牢山，其先有妇人，名沙壹，居于牢山。捕鱼水中，触沉木，若有感，因怀孕，产十子。后沉木化为龙出水，九子惊走。小子不能去，背龙而坐，龙因舐之。其母鸟语，谓背为九，谓坐为隆，因名为九隆。及长，诸兄遂相共推九隆为王。后牢山下，有一夫一妇，生十女，九隆皆以为妻，遂因孳育，皆画身像龙文，衣皆著尾。九隆死，世世不与中国通。</p>
-          <div id="innerDemo" class="galary anim">
-            <ul>
-                <li class="page" >
-                  <img src="imgs/m1.jpg" width="350" height="200" style="display: block; margin-left: auto;margin-right: auto;">
-               </li> 
-               <li class="page" >
-                  <img src="imgs/m2.jpg" width="350" height="200" style="display: block; margin-left: auto;margin-right: auto;">
-               </li> 
-               <li class="page" >
-                  <img src="imgs/m3.jpg" width="350" height="200" style="display: block; margin-left: auto;margin-right: auto;">
-               </li>             
-            </ul>
-        </div>
-        </div>
-      </li>
-      <li class="middle dragend-page">
-        <p>乐府者，声依永，律和声也。钧天九奏，既其上帝；葛天八阕，爰及皇时。自《咸》、《英》以降，亦无得而论矣。至于涂山歌于候人，始为南音；有娀谣乎飞燕，始为北声；夏甲叹于东阳，东音以发；殷整思于西河，西音以兴：音声推移，亦不一概矣。匹夫庶妇，讴吟土风，诗官采言，乐胥被律，志感丝篁，气变金石：是以师旷觇风于盛衰，季札鉴微于兴废，精之至也。
-        </p>
-        <p>夫乐本心术，故响浃肌髓，先王慎焉，务塞淫滥。敷训胄子，必歌九德，故能情感七始，化动八风。</p>
-      </li>
-      <li class="dragend-page">
-        <p>　　晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，芳草鲜美，落英缤纷，渔人甚异之。复前行，欲穷其林。</p>
-        <p>　　林尽水源，便得一山，山有小口，仿佛若有光。便舍船，从口入。初极狭，才通人。复行数十步，豁然开朗。土地平旷，屋舍俨然，有良田美池桑竹之属。阡陌交通，鸡犬相闻。其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。</p>
-
-      </li>
-      <li class="last dragend-page">
-        <p>余与嵇康、吕安居止接近，其人并有不羁之才。然嵇志远而疏，吕心旷而放，其后各以事见法。嵇博综技艺，于丝竹特妙。临当就命，顾视日影，索琴而弹之。余逝将西迈，经其旧庐。于时日薄虞渊，寒冰凄然。邻人有吹笛者，发音寥亮。追思曩昔游宴之好，感音而叹，故作赋云：</p>
-
-
-      </li>
-    </ul>
+  <div id='content'>
+    <div id="demo" class="scrollable"></div>
   </div>
 
   <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>

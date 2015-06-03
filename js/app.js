@@ -1,42 +1,38 @@
-$(function() {
+var React = require('react');
+var Swiper=require('./components/Swiper');
+var pages=require('./data').pages;
 
-	$("#demo").dragend({
-		afterInitialize: function() {
-			$(this.container).css("visibility", "visible");
-			var pages=$('.dragend-page');
+// 设置起始页
+pages.startPage=1;
 
-			for(var i=0;i<pages.length;i++){
-				if(i>0){
-					$(pages[i]).find('.anim').css('visibility', 'hidden');
-				}
-			}
-		},
-		onSwipeStart:function(container,element,page,direction){
-			this.currentPage=page;
-		},
-		onSwipeEnd:function(container,element,page){
-			if(page!=this.currentPage){
-				$('.dragend-page').find('.anim').css({
-					'visibility':'hidden',
-					'-webkit-animation':''
-				});
+React.initializeTouchEvents(true);
 
-				this.settings.animationCallback($(element).find('.anim'));
-			}
+React.render(
+	<Swiper data={pages}/>,
+	$('#demo')[0]
+);
 
-			this.currentPage=page;
-		},
-		animationCallback:function(animElements){
-			$(animElements).css('-webkit-animation','fade 0.5s');
+// $('#demo').on('start touchmove end',function(e){
+// 	return true;
+// });
 
-			$(animElements).css({
-				visibility:'visible'
-			});
-		}		
-	});
+// $('#demo').on('touchstart',function(e){
+// 	e.preventDefault();
+// 	return false;
+// 	// e.stopPropagation();
+// });
 
-	$("#innerDemo").dragend({
-		pageClass: "page",
-		stopPropagation: true
-	});
-});
+// 防止页面整体上下滚动
+// $(document).on('touchmove',function(e){
+// 	e.preventDefault();
+// });
+
+// $('#demo').on('touchmove', function(e){
+//   e.stopPropagation();
+//   return false;
+// });
+
+
+
+
+

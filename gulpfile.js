@@ -5,11 +5,13 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var sourcemaps = require('gulp-sourcemaps');
+var reactify = require('reactify');
 
 gulp.task('default', function() {
   	var b = browserify({
 	    entries: './js/app.js',
-	    debug: true
+	    debug: true,
+	    transform: [reactify]
 	});
 
 	return b.bundle()

@@ -421,6 +421,8 @@
 
       _onEnd: function( event ) {
 
+        // alert('on end');
+
         event = event.originalEvent || event;
 
         if (this.settings.stopPropagation) {
@@ -657,6 +659,8 @@
       // Direction and pagenumber
 
       _jumpToPage: function( options, pageNumber ) {
+
+        // alert('jump to page');
 
         if ( options ) {
           this._calcNewPage( options, pageNumber );
