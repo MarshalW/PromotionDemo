@@ -9,10 +9,18 @@ var GalaryComponent=require('../components/GalaryComponent');
 
 var Page=React.createClass({
 	render:function(){
-		var pageClassName='dragend-page';
+		// var pageClassName='dragend-page';
 		var page=this.props.data;
+
+		var templateName=page.templateName||'undefineTemplateName';
+
+		var classes = classNames({
+			'dragend-page':true,
+			templateName:templateName!='undefineTemplateName'
+		});
+
 		return (
-			<li className={pageClassName}>
+			<li className={classes}>
 				<div className='content'>
 					{page.components.map(function(component){
 						if(component.type=='ContentComponent'){

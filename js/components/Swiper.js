@@ -7,7 +7,7 @@ var Page=require('../components/Page');
 var Swiper=React.createClass({
 	animationCallback:function(animElements){
 		$(animElements).each(function(index,element){
-			var animData=$(element).attr('data-anim');
+			var animData=$(element).attr('data-anim');	
 			$(element).css({
 				'-webkit-animation':animData						
 			});
@@ -23,10 +23,11 @@ var Swiper=React.createClass({
 	},	
 	componentDidMount:function(){
 		var swipe=this;
-		
+
 		$(React.findDOMNode(this)).parent().dragend({
 			page:swipe.props.data.startPage,
 			afterInitialize: function() {
+				$(this.container).addClass('full-screen-swiper');
 				$(this.container).css("visibility", "visible");
 				$(this.container).find('.anim').css('visibility', 'hidden');
 				swipe.animationCallback($(this.pages[this.page]).find('.anim'));

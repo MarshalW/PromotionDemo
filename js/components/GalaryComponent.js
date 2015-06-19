@@ -41,8 +41,8 @@ var GalaryComponent=React.createClass({
 
 var GalaryComponentItem=React.createClass({
 	render:function(){
-		var classes = classNames('galaryPage');
-		var imageClasses=classNames('galaryImage');
+		var classes = classNames('galaryPage','in-page-galary');
+		var imageClasses=classNames('in-page-galary-image');
 		var image=this.props.data;
 		return (
 			<li className={classes}>

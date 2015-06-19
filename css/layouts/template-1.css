@@ -1,0 +1,7 @@
+.template-1 p:nth-child(1){
+	margin-top: 30px;
+}
+
+.template-1 p:last-child {
+  margin-bottom: 200px;
+}

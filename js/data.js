@@ -2,6 +2,7 @@ exports.pages=[
 	{
 		id:1,
 		title:'水经注－卷37',
+		templateName:'template-1',
 		components:[
 			{
 				id:122,

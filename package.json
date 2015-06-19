@@ -1,0 +1,32 @@
+{
+  "name": "prototion-demo",
+  "version": "1.0.0",
+  "description": "使用React实现的翻页动画原型",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browserify": "^10.2.1",
+    "gulp": "^3.8.11",
+    "classnames": "^2.1.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "object-assign": "^2.0.0",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarshalW/PromotionDemo.git"
+  },
+  "author": "marshal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarshalW/PromotionDemo/issues"
+  },
+  "homepage": "https://github.com/MarshalW/PromotionDemo#readme"
+}

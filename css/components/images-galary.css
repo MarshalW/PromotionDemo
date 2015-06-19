@@ -1,0 +1,11 @@
+.in-page-galary-image{
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.in-page-galary{
+  max-height: 300px;
+}
+
+/*in-page-galary-image*/
