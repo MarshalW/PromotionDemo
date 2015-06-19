@@ -15,7 +15,7 @@ npm install --global gulp
 然后，执行：
 
 ```
-git clone git@github.com:MarshalW/PromotionDemo.git
+git clone https://github.com/MarshalW/PromotionDemo.git
 ```
 
 进入`PromotionDemo`目录， 切换到react分支，执行：
