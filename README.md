@@ -18,7 +18,13 @@ npm install --global gulp
 git clone git@github.com:MarshalW/PromotionDemo.git
 ```
 
-进入`PromotionDemo`目录， 执行：
+进入`PromotionDemo`目录， 切换到react分支，执行：
+
+```
+git branch react
+```
+
+然后安装所需的包，执行：
 
 ```
 npm install
